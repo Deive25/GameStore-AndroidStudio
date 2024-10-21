@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="platforms_array">
+        <item>PC</item>
+        <item>PlayStation 5</item>
+        <item>Xbox Series X</item>
+        <item>Nintendo Switch</item>
+        <item>PlayStation 4</item>
+        <item>Xbox One</item>
+        <!-- Adicione outras plataformas conforme necessário -->
+    </string-array>
+
+    <string-array name="status_array">
+        <item>Disponível</item>
+        <item>Esgotado</item>
+        <item>Pré-venda</item>
+        <item>Descontinuado</item>
+        <!-- Adicione outros status conforme necessário -->
+    </string-array>
+</resources>
