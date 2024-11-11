@@ -161,7 +161,7 @@ public class GameFormActivity extends AppCompatActivity {
                 Bitmap bitmap = drawable.getBitmap();
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] fotoBytes = stream.toByteArray();
+                byte[] fotoBytes = compressImageForDatabase(bitmap);
                 jogo.setFotoBytes(fotoBytes);
             }
 
@@ -188,7 +188,7 @@ public class GameFormActivity extends AppCompatActivity {
                 Bitmap bitmap = drawable.getBitmap();
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] fotoBytes = stream.toByteArray();
+                byte[] fotoBytes = compressImageForDatabase(bitmap);
                 jogo.setFotoBytes(fotoBytes);
             }
 
@@ -203,6 +203,13 @@ public class GameFormActivity extends AppCompatActivity {
         Intent it = new Intent(this, MainActivity.class);;
         startActivity(it);
         finish();
+    }
+
+    private byte[] compressImageForDatabase(Bitmap image) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        // Comprime a imagem para 50% da qualidade original
+        image.compress(Bitmap.CompressFormat.JPEG, 50, baos);
+        return baos.toByteArray(); // Retorna imagem comprimida em bytes
     }
 
     private void resetForm() {

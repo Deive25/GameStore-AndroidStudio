@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Game Form"
+                    android:text="Informações do jogo"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -68,8 +68,8 @@
 
             <ImageView
                 android:id="@+id/gameImageView"
-                android:layout_width="262dp"
-                android:layout_height="438dp"
+                android:layout_width="292dp"
+                android:layout_height="435dp"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Imagem do jogo"
                 android:scaleType="centerCrop"
